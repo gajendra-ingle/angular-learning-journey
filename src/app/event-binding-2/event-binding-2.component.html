@@ -1,0 +1,33 @@
+<p>event-binding-2 works!</p>
+
+<input #myname class="form-control w-25 m-2" type="text" placeholder="Enter name" />
+
+<button (click)="onSend(myname)" class="btn btn-warning m-2">Send</button>
+
+<hr>
+<br>
+
+<input #myData class="form-control w-25 m-2" type="text" placeholder="Enter name" />
+
+<button (click)="sendData(myData.value)" class="btn btn-warning m-2">Send</button>
+
+<hr><br>
+
+<!-- Real life example -->
+<input #num1 class="form-control w-25 m-2" type="text" placeholder="Enter first number" />
+<input #num2 class="form-control w-25 m-2" type="text" placeholder="Enter second number" />
+
+<button (click)="onAddtion(num1.value, num2.value)" class="btn btn-info m-2">Addition</button>
+
+<input [value]="additionResult" class="form-control w-25 m-2" type="text" placeholder="Result" />
+
+<br>
+<hr>
+<!-- Two way data bindng -->
+
+<h3>Two way data binding</h3>
+<input [(ngModel)]="name" type="text" placeholder="Enter Name" class="form-control w-25 m-2" />
+
+<h4>{{name}}</h4>
+
+<br><br><br><br><br>

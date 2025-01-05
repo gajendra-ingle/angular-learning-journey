@@ -1,0 +1,22 @@
+<p>property-binding works!</p>
+
+<input [value]="name" type="text" class="form-control w-25" placeholder="Enter your name" />
+
+<br /><br />
+
+<img  [src]="imgUrl" class="myClass" alt="" />
+
+<br>
+<hr>
+
+<div>
+    String Interpolation VS Property Binding
+</div>
+
+<div hidden="{{isHidden}}">
+    Display the text using string interpolation.
+</div>
+
+<div [hidden]="isHidden">
+    Display the text using property binding.
+</div>
