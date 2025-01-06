@@ -1,0 +1,24 @@
+<p>for-directive works!</p>
+
+<br />
+<br />
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Sr. no</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Product Qty</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let product of arrProduct; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.qty }}</td>
+    </tr>
+  </tbody>
+</table>
