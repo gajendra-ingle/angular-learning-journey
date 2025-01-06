@@ -13,6 +13,9 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { EventBinding2Component } from './event-binding-2/event-binding-2.component';
 import { FormsModule } from '@angular/forms';
 import { EventBinding3Component } from './event-binding-3/event-binding-3.component';
+import { IfDirectiveComponent } from './if-directive/if-directive.component';
+import { ForDirectiveComponent } from './for-directive/for-directive.component';
+import { SwitchDirectiveComponent } from './switch-directive/switch-directive.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { EventBinding3Component } from './event-binding-3/event-binding-3.compon
     ClassBindingComponent,
     EventBindingComponent,
     EventBinding2Component,
-    EventBinding3Component
+    EventBinding3Component,
+    IfDirectiveComponent,
+    ForDirectiveComponent,
+    SwitchDirectiveComponent
   ],
   imports: [
     BrowserModule,
