@@ -1,0 +1,31 @@
+<p>if-directive works!</p>
+
+<!--  *ngIf directive -->
+<!-- <div *ngIf="rating <= 5">
+    <h1>If Directive = true </h1>
+</div> -->
+
+<!-- *ngIf directive with else keyword -->
+<div *ngIf="rating <= 5; else myElsePart">
+    <h1>If Directive = true</h1>
+</div>
+
+<ng-template #myElsePart>
+    <h1>If Directive = false</h1>
+</ng-template>
+
+<hr />
+<br />
+
+<label>Enter Number : </label>
+<input class="form-control w-25" type="text" [(ngModel)]="num" />
+
+<div *ngIf="num != 0">
+    <div *ngIf="num % 2 == 0; else oddNumber">
+        <h2>Number {{ num }} is even</h2>
+    </div>
+
+    <ng-template #oddNumber>
+        <h2>Number {{ num }} is odd</h2>
+    </ng-template>
+</div>
