@@ -10,6 +10,6 @@ export class SwitchDirectiveComponent {
   choice: string = '';
 
   onSend(colorName: string) {
-    this.choice = colorName;
+    this.choice = colorName.toLocaleLowerCase().trim();
   }
 }
