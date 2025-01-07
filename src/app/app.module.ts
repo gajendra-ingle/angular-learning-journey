@@ -16,6 +16,8 @@ import { EventBinding3Component } from './event-binding-3/event-binding-3.compon
 import { IfDirectiveComponent } from './if-directive/if-directive.component';
 import { ForDirectiveComponent } from './for-directive/for-directive.component';
 import { SwitchDirectiveComponent } from './switch-directive/switch-directive.component';
+import { Parent1Component } from './parent1/parent1.component';
+import { Child1Component } from './child1/child1.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { SwitchDirectiveComponent } from './switch-directive/switch-directive.co
     EventBinding3Component,
     IfDirectiveComponent,
     ForDirectiveComponent,
-    SwitchDirectiveComponent
+    SwitchDirectiveComponent,
+    Parent1Component,
+    Child1Component
   ],
   imports: [
     BrowserModule,
