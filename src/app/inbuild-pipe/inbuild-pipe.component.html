@@ -1,0 +1,50 @@
+<div class="container w-50 m-auto">
+    <h2 class="text-info text-center">Inbuilt Pipe</h2>
+    <hr />
+
+    <h5>Orginal Data : {{ strData }}</h5>
+    <h5>Lowercase Pipe : {{ strData | lowercase }}</h5>
+    <h5>Uppercase Pipe : {{ strData | uppercase }}</h5>
+    <h5>Title Case Pipe : {{ strData | titlecase }}</h5>
+    <hr />
+
+    <h5>Percent Pipe : {{ 0.25 | percent }}</h5>
+    <h5>Percent Pipe : {{ 0.025 | percent }}</h5>
+    <h5>Percent Pipe : {{ 0.025 | percent : "1.1" }}</h5>
+    <hr />
+
+    <h5>Currency Pipe : {{ 50 | currency }}</h5>
+    <h5>Currency Pipe : {{ 100 | currency : "INR" }}</h5>
+    <h5>Currency Pipe : {{ 100 | currency : "INR " : "code" }}</h5>
+    <hr />
+
+    <h5>Number Pipe : {{ 5.568547 | number : "1.2-3" }}</h5>
+    <!-- 5.569 -->
+    <h5>Number Pipe : {{ 5.568547 | number : "2.2-3" }}</h5>
+    <!--  05.569 -->
+    <h5>Number Pipe : {{ 5.6 | number : "2.2-3" }}</h5>
+    <!--  05.60 -->
+    <h5>Number Pipe : {{ 65.568547 | number : "1.2-3" }}</h5>
+    <!-- 65.569 -->
+    <hr />
+
+    <h5>Date : {{ myDate }}</h5>
+    <!-- Thu Jan 30 2025 12:02:02 GMT+0530 (India Standard Time) -->
+    <h5>Date Pipe : {{ myDate | date }}</h5>
+    <!-- Jan 30, 2025 -->
+    <h5>Medium Date : {{ myDate | date : "mediumDate" }}</h5>
+    <!-- Jan 30, 2025  -->
+    <h5>Short Pipe : {{ myDate | date : "shortDate" }}</h5>
+    <h5>DD/MM/YYY Date Pipe : {{ myDate | date : "dd/mm/yyyy" }}</h5>
+    <!-- 30/03/2025 -->
+    <h5>DD-MM-YYYY Date Pipe : {{ myDate | date : "dd-mm-yyyy" }}</h5>
+    <!-- 30-03-2025 -->
+    <h5>Long Pipe : {{ myDate | date : "longDate" }}</h5>
+    <!-- January 30, 2025 -->
+    <hr />
+
+    
+    <!-- Chaining of pipe -->
+    <h5>Chaining of pipe : {{ myDate | date : "longDate" | uppercase }}</h5>
+    <!-- JANUARY 30, 2025-->
+</div>

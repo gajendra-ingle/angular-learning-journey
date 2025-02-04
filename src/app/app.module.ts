@@ -18,6 +18,8 @@ import { ForDirectiveComponent } from './for-directive/for-directive.component';
 import { SwitchDirectiveComponent } from './switch-directive/switch-directive.component';
 import { Parent1Component } from './parent1/parent1.component';
 import { Child1Component } from './child1/child1.component';
+import { InbuildPipeComponent } from './inbuild-pipe/inbuild-pipe.component';
+import { CustompipeComponent } from './custompipe/custompipe.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { Child1Component } from './child1/child1.component';
     ForDirectiveComponent,
     SwitchDirectiveComponent,
     Parent1Component,
-    Child1Component
+    Child1Component,
+    InbuildPipeComponent,
+    CustompipeComponent
   ],
   imports: [
     BrowserModule,
