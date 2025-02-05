@@ -20,6 +20,9 @@ import { Parent1Component } from './parent1/parent1.component';
 import { Child1Component } from './child1/child1.component';
 import { InbuildPipeComponent } from './inbuild-pipe/inbuild-pipe.component';
 import { CustompipeComponent } from './custompipe/custompipe.component';
+import { SummaryPipe } from './summary.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +42,15 @@ import { CustompipeComponent } from './custompipe/custompipe.component';
     Parent1Component,
     Child1Component,
     InbuildPipeComponent,
-    CustompipeComponent
+    CustompipeComponent,
+    SummaryPipe,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
