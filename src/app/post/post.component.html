@@ -1,4 +1,62 @@
-<div class="container w-50 m-auto">
+<div class="container-fluid">
     <h2 class="text-info text-center">Post</h2>
     <hr />
+
+    <form action="">
+        <div class="form-group">
+            <label>Title:</label>
+            <input type="email" class="form-control w-50" #mytitle />
+        </div>
+
+        <div class="form-group">
+            <label>Body:</label>
+            <input type="text" class="form-control w-50" #mybody />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary" (click)="onSend(mytitle.value, mybody.value)">
+            Submit
+        </button>
+    </form>
+
+    <hr />
+
+    <div [hidden]="isHidden">
+        <label>ID : </label>
+        <input type="text" class="form-control w-25" [(ngModel)]="id" readonly />
+        <br />
+
+        <label>Title : </label>
+        <input type="text" class="form-control w-25" [(ngModel)]="title" /> <br />
+
+        <label>Body : </label>
+        <input type="text" class="form-control w-25" [(ngModel)]="body" /> <br />
+
+        <button class="btn btn-info" (click)="onUpdate()">Update</button>
+    </div>
+
+    <hr />
+
+    <table class="table table-bordered">
+        <thead>
+            <tr class="text-center">
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts">
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.body }}</td>
+                <td>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-warning" (click)="onEdit(post)">Edit</button>
+                        <button class="btn btn-danger" (click)="onDelete(post.id)">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
